@@ -6,19 +6,12 @@ import urllib3
 urllib3.disable_warnings()
 
 # USE YOUR IPs
-DEVICE_IPS = ['192.168.0.10',
-              '192.168.0.11',
-              '192.168.0.12',
-              '192.168.0.13',
-              '192.168.0.14',
-              '192.168.0.15',
-              '192.168.0.16',
-              '192.168.0.17'
+DEVICE_IPS = ['10.10.10.43'
               ]
 
 # TODO: USE YOUR ATD CREDENTIALS
-USERNAME = ''
-PASSWORD = ''
+USERNAME = 'cvpadmin'
+PASSWORD = 'cvparista'
 
 if __name__ == '__main__':
     payload = {'jsonrpc': '2.0',
@@ -26,7 +19,7 @@ if __name__ == '__main__':
                'params': {
                  'version': 1,
                  # TODO: Modify the list of commands to run on the switches
-                 'cmds': ["show clock"]
+                 'cmds': ["show version"]
                },
                'id': '1'
               }
